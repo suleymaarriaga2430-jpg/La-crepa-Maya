@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marquesitas La Crepa Maya</title>
+    <!-- CSS de Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
+    
+    <style>
+        :root {
+            --color-principal: #EACED8; 
+            --color-fondo: #fcf8f9; 
+            --gris-fuerte: #333333;
+            --gris-medio: #666666;
+            --gris-claro: #999999;
+        }
+
+        body { 
+            font-family: 'Quicksand', sans-serif; 
+            background-color: var(--color-fondo);
+            color: var(--gris-fuerte);
+        }
+
+        .brand-font { font-family: 'Pacifico', cursive; color: var(--gris-fuerte); }
+
+        /* Navegación */
+        .navbar { 
+            background-color: white !important; 
+            border-bottom: 3px solid var(--color-principal); 
+        }
+        .nav-link { color: var(--gris-medio) !important; font-weight: 500; }
+        .nav-link:hover { color: var(--gris-fuerte) !important; }
+
+        /* Hero Section */
+        .hero-section {
+            background-color: var(--color-principal);
+            padding: 100px 0;
+            border-bottom-left-radius: 80px;
+            border-bottom-right-radius: 80px;
+            color: var(--gris-fuerte);
+        }
+
+        /* Tarjetas de Menú */
+        .card {
+            border: none;
+            border-radius: 25px;
+            background-color: #ffffff;
+            transition: all 0.3s ease;
+        }
+        .card:hover { 
+            transform: scale(1.03);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05) !important;
+        }
+        .card-title { color: var(--gris-fuerte); font-weight: 700; }
+        .card-text { color: var(--gris-medio); }
+        
+        .price-badge {
+            background-color: var(--color-principal);
+            color: var(--gris-fuerte);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        /* Botones */
+        .btn-maya {
+            background-color: var(--gris-fuerte);
+            color: white;
+            border-radius: 50px;
+            padding: 12px 35px;
+            border: none;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+        .btn-maya:hover {
+            background-color: var(--gris-medio);
+            color: white;
+        }
+
+        footer { background-color: white; color: var(--gris-claro); border-top: 1px solid #eee; }
+    </style>
+</head>
+<body>
+
+    <!-- Navegación -->
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container">
+            <a class="navbar-brand brand-font fs-2" href="#">La Crepa Maya</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menú Maya</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="inicio" class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 brand-font mb-3">Marquesitas La Crepa Maya</h1>
+            <p class="lead mb-4 text-dark opacity-75">Tradición y sabor yucateco en cada mordida crujiente.</p>
+            <a href="#menu" class="btn btn-maya">Explorar Menú</a>
+        </div>
+    </header>
+
+    <!-- Menú -->
+    <section id="menu" class="container py-5">
+        <div class="text-center mb-5">
+            <h2 class="brand-font fs-1">Nuestras Especialidades</h2>
+            <p class="text-secondary">Elaboradas con el auténtico Queso de Bola</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Producto 1 -->
+            <div class="col-md-4 text-center">
+                <div class="card shadow-sm p-4">
+                    <div class="mb-3">
+                         <img src="https://cdn-icons-png.flaticon.com" width="70" alt="Tradicional" style="filter: grayscale(1);">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Tradicional Maya</h5>
+                        <p class="card-text small">La clásica con puro queso de bola holandés. Crujiente y saladita.</p>
+                        <div class="mt-3"><span class="price-badge">$45.00</span></div>
+                    </div>
+                </div>
+            </div>
+            <!-- Producto 2 -->
+            <div class="col-md-4 text-center">
+                <div class="card shadow-sm p-4">
+                    <div class="mb-3">
+                         <img src="https://cdn-icons-png.flaticon.com" width="70" alt="Combinada" style="filter: grayscale(1);">
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Delicia Combinada</h5>
+                        <p class="card-text small">Queso de bola con tu dulce favorito (Nutella, Cajeta o Lechera).</p>
+                        <div class="mt-3"><span class="price-badge">$55.00</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="py-5 bg-white">
+        <div class="container text-center">
+            <div class="row justify-content-center">
+                <div class="col-md-8 p-5 shadow-sm" style="border-radius: 40px; background-color: var(--color-fondo); border: 2px dashed var(--color-principal);">
+                    <h2 class="brand-font mb-4">¡Pide tu Marquesita!</h2>
+                    <p class="text-secondary">Encuéntranos todas las tardes para consentir tu paladar.</p>
+                    <div class="row mt-4">
+                        <div class="col-6">
+                            <p class="mb-1"><strong>📍 Ubicación</strong></p>
+                            <p class="small text-secondary">Calle Maya #123, Centro</p>
+                        </div>
+                        <div class="col-6">
+                            <p class="mb-1"><strong>🕒 Horarios</strong></p>
+                            <p class="small text-secondary">Lun-Dom: 6pm a 11pm</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <a href="#" class="btn btn-outline-dark btn-sm px-4">WhatsApp</a>
+                        <a href="#" class="btn btn-outline-dark btn-sm px-4">Facebook</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-4 text-center">
+        <p class="mb-0 small">&copy; 2024 Marquesitas La Crepa Maya. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- JS de Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net"></script>
+</body>
+</html>
